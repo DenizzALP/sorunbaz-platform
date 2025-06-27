@@ -1,0 +1,27 @@
+<header class="navbar">
+  <div class="logo">SorunBaz</div>
+
+  <nav id="nav-links" class="nav-links">
+    <a href="/">Ana Sayfa</a>
+    <a href="/hakkimizda">Hakkımızda</a>
+    <a href="/iletisim">İletişim</a>
+  </nav>
+
+  <div class="nav-buttons">
+    <form class="search-form" action="/ara" method="get">
+        <input type="text" name="q" placeholder="Ne arıyorsun?">
+        <button type="submit">Ara</button>
+    </form>
+
+    <!-- <button id="search-open"><i class="fa fa-search"></i></button> -->
+    <button id="search-toggle" class="mobile-search-button"><i class="fa fa-search"></i></button>
+    <button id="theme-toggle" title="Tema Değiştir">🌗</button>
+    <button id="menu-toggle" class="hamburger" title="Menü">☰</button>
+  </div>
+
+</header>
+
+<form id="search-bar" class="mobile-search-bar" action="/ara" method="get">
+  <input type="text" name="q" placeholder="Ara..." />
+  <button type="submit">Ara</button>
+</form>
