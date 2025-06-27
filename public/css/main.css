@@ -75,7 +75,8 @@
 
 /* ===Comment Section === */
 .comment-item{
-  background-color: #f9fafb;
+ border-bottom: 1px solid var(--text-color);
+ padding: 20px 20px 20px 0;
 }
 
 
