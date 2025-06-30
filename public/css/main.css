@@ -78,9 +78,92 @@
  border-bottom: 1px solid var(--text-color);
  padding: 20px 20px 20px 0;
 }
+/* === REGISTER SITE === */
+.register{
+  padding: 100px;
+  display: flex;
+  align-items:center;
+  flex-direction: column;
+  gap: 50px;
+}
+#register-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 20px; 
+  width: 100%;
+}
+.mini-container{
+  display: flex;
+  align-items:center;
+  flex-direction: column;
+  width: 100%;
+}
+.register-title{
+  font-size: 2rem;
+  /* padding-top: 50px; */
+}
+.label{
+  padding: 10px;
+  font-size: 1.5rem;
+}
+#userName,#email,#password{
+  border: 1px solid var(--text-color) !important;
+  border-radius: 5px ;
+  width: 50% ;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2rem;
+}
+.info-msg{
+  display: none;
+}
 
+#userName.valid {
+  border: 3px solid #21BF73 !important;
+}
 
+#userName.invalid {
+  border: 3px solid #FD7C73 !important;
+}
+#email.valid {
+  border: 3px solid #21BF73 !important;
+}
 
+#email.invalid {
+  border: 3px solid #FD7C73 !important;
+}
+
+#password.valid {
+  border: 3px solid #21BF73 !important;
+}
+
+#password.invalid {
+  border: 3px solid #FD7C73 !important;
+}
+/* === REGISTER SITE === */
+.login{
+  padding: 50px;
+  display: flex;
+  align-items:center;
+  flex-direction: column;
+  gap: 50px;
+}
+
+#login-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 20px; 
+  width: 100%;
+}
+
+#email-login,#password-login{
+  border: 1px solid var(--text-color) !important;
+  border-radius: 5px ;
+  width: 50% ;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2rem;
+}
 
 /* === MOBİL === */
 @media (max-width: 768px) {
@@ -110,7 +193,9 @@
   .logo {
      padding-right:0;
   }
-
+  #userName,#email,#password{
+    width: 100%;
+  }
 }
 @media (min-width: 768px) {
   .mobile-search-button,
