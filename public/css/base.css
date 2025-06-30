@@ -99,6 +99,7 @@ p {
   transform: translateY(-2px);
 }
 
+
 /* === MEDIA QUERIES FOR RESPONSIVE FONTS === */
 @media (max-width: 768px) {
   html {

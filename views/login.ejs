@@ -1,0 +1,17 @@
+<section class="login container">
+  <h1 class="login-title">Giriş Yap</h1>
+    <% if (errorMessage) { %>
+        <p class="error-msg"><%= errorMessage %></p>
+    <% } %>
+  <form id="login-form" method="POST" action="/login">
+    <div class="mini-container">
+      <h3 class="label">Email</h3>
+      <input type="text" name="email" id="email-login" required>
+    </div>
+    <div class="mini-container">
+      <h3 class="label">Password</h3>
+      <input type="password" name="password" id="password-login" required>
+    </div>
+    <button type="submit">Giriş</button>
+  </form>
+</section>

@@ -1,0 +1,24 @@
+<section class="register container">
+    <h1 class="register-title">Kayıt Ol</h1>
+    <% if (errorMessage) { %>
+        <p class="error-msg"><%= errorMessage %></p>
+    <% } %>
+    <form id="register-form" onsubmit="return validateForm(event)" method="POST" action="/register" >
+        <div class="mini-container">
+            <h3 class="label">User Name</h1>
+            <input type="text" name="userName" id="userName">
+            <p class="info-msg">3 ile 20 karakter arasında, sadece harf, rakam ve alt çizgi (_).</p>
+        </div>
+        <div class="mini-container">
+            <h3 class="label">Email</h1>
+            <input type="text" name="email" id="email">
+            <p class="info-msg">Geçerli bir e-posta formatında olmalıdır.</p>
+        </div>
+        <div class="mini-container">
+            <h3 class="label">Password</h1>
+            <input type="password" name="password" id="password">
+            <p class="info-msg">6 ile 20 karakter arasında, harf, rakam ve @, _, - karakterlerini içerebilir.</p>
+        </div>    
+        <button type="submit" id="submit">Submit</button>
+    </form>
+</section>
