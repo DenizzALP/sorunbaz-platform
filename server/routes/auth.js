@@ -62,11 +62,6 @@ router.post('/login', async (req, res) => {
     }
 
 
-    // if (!isMatch) {
-    //   return res.send('Şifre yanlış.');
-    // }
-
-    // Session’a kullanıcıyı kaydet
     req.session.user = {
       _id: user._id,
       userName: user.userName,

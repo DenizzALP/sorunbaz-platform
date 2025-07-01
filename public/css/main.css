@@ -164,11 +164,60 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.2rem;
 }
-/* profile */
+/* ==== profile ===*/
 .profile-text{
   font-size: 1.5rem;
 }
+/* === Post detail === */
+.all-comments{
+  padding-top:70px ;
 
+}
+.all-comments-posts{
+  padding-top:70px ;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.post-title-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.post-content-container{
+  border-bottom: 2px solid var(--text-color);
+
+}
+.comment-title{
+  padding-bottom: 50px;
+}
+.comment-container{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.comment{
+  border-bottom: 1px solid var(--text-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.comment-date{
+ 
+}
+.create-comment{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.create-comment-text-area{
+  width: 50%;
+
+  /* width: 100%;
+  max-width: 600px; */
+}
 /* === MOBİL === */
 @media (max-width: 768px) {
   .nav-links {
@@ -200,6 +249,7 @@
   #userName,#email,#password{
     width: 100%;
   }
+
 }
 @media (min-width: 768px) {
   .mobile-search-button,
