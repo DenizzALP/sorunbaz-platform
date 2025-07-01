@@ -25,12 +25,6 @@ router.post('/register', async (req, res) => {
     return res.render('login', { errorMessage: 'Bu email zaten kullanılıyor.' });
   }
 
- 
-  //const hashedPassword = bcrypt.hashSync(password, bcrypt.genSaltSync(8))
-  //const hashedPassword = await bcrypt.hash(password, 10);
-  
-  // const isMatch = await bcrypt.compare(password, hashedPassword);
-  // console.log(isMatch)
 
 
   await User.create({
@@ -85,5 +79,18 @@ router.post('/login', async (req, res) => {
     res.send('Bir hata oluştu.');
   }
 });
+
+
+// === LOGOUT
+router.get('/logout', (req, res) => {
+  req.session.destroy(err => {
+    if (err) {
+      console.log('Oturum silinemedi:', err);
+      return res.redirect('/');
+    }
+    res.redirect('/login');
+  });
+});
+
 
 module.exports = router;

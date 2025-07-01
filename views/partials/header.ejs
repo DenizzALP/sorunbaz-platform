@@ -5,9 +5,25 @@
     <a href="/">Ana Sayfa</a>
     <a href="/hakkimizda">Hakkımızda</a>
     <a href="/iletisim">İletişim</a>
+    <% if (user) { %>
+      <a href="/logout">Çıkış Yap</a>
+
+    <% } else { %>
+      <a href="/login">Giriş Yap</a>
+      <a href="/register">Kayıt Ol</a>
+    <% } %>
   </nav>
+    <% if (user) { %>
+      <span class="profile-text"><a href="/profile"><%= user.userName %></a></span>
+    <% } else { %>
+
+    <% } %>
 
   <div class="nav-buttons">
+
+
+
+
     <form class="search-form" action="/ara" method="get">
         <input type="text" name="q" placeholder="Ne arıyorsun?">
         <button type="submit">Ara</button>
