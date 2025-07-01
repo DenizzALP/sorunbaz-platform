@@ -1,5 +1,39 @@
-<section class="all-comments container">
-    <h1><%= data.title %></h1>
-    <article class="article"><%= data.content %></article>
-
+<section class="all-comments-posts container">
+    <div class="post-title-container">
+        <h1 class="post-title"><%= post.title %></h1>
+        <span class="post-date"><%= post.createdAt.toLocaleDateString() %></span>
+    </div>
+    <div class="post-content-container">
+        <article class="article"><%= post.content %></article>
+    </div>
+    <div class="post-comment-container">
+        <h1 class="comment-title">Yorumlar:</h1>
+        <% if (comments.length > 0) { %>
+        <div class="comment-container">  
+            <% comments.forEach(comment => { %>
+                <div class="comment">
+                    <div>
+                        <strong><%= comment.author.userName %></strong>:
+                        <%= comment.content %>
+                    </div>
+                    <small class="comment-date">(<%= comment.createdAt.toLocaleDateString() %>)</small>
+                </div>
+            <% }) %>
+        </div> 
+        <% } else { %>
+        <p>Henüz yorum yapılmamış.</p>
+        <% } %>
+    </div>        
+    <br><br>
+    <div class="create-comment-container">
+        <% if (user) { %>
+        <form class="create-comment" action="/comment/<%= post._id %>" method="POST">
+            <textarea class="create-comment-text-area" name="content" placeholder="Yorumunuzu yazın..." required></textarea>
+            <button type="submit">Yorum Yap</button>
+        </form>
+        <% } else { %>
+        <p>Yorum yapmak için <a href="/login">giriş yapın</a>.</p>
+        <% } %>
+    </div>
 </section>
+

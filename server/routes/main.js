@@ -56,27 +56,43 @@ router.get('', async (req, res) => {
   }
 });
 
-router.get('/post/:id', async (req,res) =>{
-    try {
-        let slug = req.params.id;
-        const data = await Post.findById({_id: slug});
+// router.get('/post/:id', async (req,res) =>{
+//     try {
+//         let slug = req.params.id;
+//         const post = await Post.findById({_id: slug});
 
-        const locals = {
-        title: "SORUNBAZ",
-        description: "Sor ve Öğren"
-        };
+//         const locals = {
+//         title: "SORUNBAZ",
+//         description: "Sor ve Öğren"
+//         };
 
-        res.render('post', {
-            locals,
-            data,
-            currentRoute: `/post/${slug}`
-        });
+//         res.render('post', {
+//             locals,
+//             post,
+//             currentRoute: `/post/${slug}`
+//         });
 
-    }catch(error){
-        console.log(error)
-    }
-})
+//     }catch(error){
+//         console.log(error)
+//     }
+// })
+router.get('/post/:id', async (req, res) => {
+  try {
+    const post = await Post.findById(req.params.id)
+      .populate('author', 'userName')
+      .lean();
 
+    const comments = await Comment.find({ post: req.params.id })
+      .populate('author', 'userName')
+      .sort({ createdAt: -1 })
+      .lean();
+
+    res.render('post', { post, comments }); 
+  } catch (err) {
+    console.log(err);
+    res.send('Post bulunamadı.');
+  }
+});
 
 
 

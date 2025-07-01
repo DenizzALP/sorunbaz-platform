@@ -27,8 +27,10 @@ app.use((req, res, next) => {
   next();
 });
 
+
 app.use(express.urlencoded({ extended: true })); // body parser
 
+app.use('/', require('./server/routes/comment'));
 
 app.use(express.static('public'))
 
