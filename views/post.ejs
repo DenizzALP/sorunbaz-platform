@@ -1,11 +1,14 @@
 <section class="all-comments-posts container">
+    <h1 class="post-title"><%= post.author.userName %></h1>
     <div class="post-title-container">
         <h1 class="post-title"><%= post.title %></h1>
         <span class="post-date"><%= post.createdAt.toLocaleDateString() %></span>
     </div>
     <div class="post-content-container">
         <article class="article"><%= post.content %></article>
+  
     </div>
+    <div class="tags">Etiketler: <%= post.tags %></div>  
     <div class="post-comment-container">
         <h1 class="comment-title">Yorumlar:</h1>
         <% if (comments.length > 0) { %>

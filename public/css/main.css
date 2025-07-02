@@ -204,9 +204,9 @@
   align-items: center;
 
 }
-.comment-date{
+/* .comment-date{
  
-}
+} */
 .create-comment{
   display: flex;
   justify-content: space-between;
@@ -218,6 +218,74 @@
   /* width: 100%;
   max-width: 600px; */
 }
+/* === Post detail === */
+/* .create-comment-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+ */
+.create-comment {
+  padding-top: 80px;
+}
+
+.create-comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: var(--navbar-bg);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.create-comment-form input,
+.create-comment-form textarea {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 1px solid var(--text-color);
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+.create-comment-form input:focus,
+.create-comment-form textarea:focus {
+  border-color: var(--text-color);
+  outline: none;
+}
+
+.create-comment-form textarea {
+  min-height: 200px;
+  resize: vertical;
+}
+
+.create-comment-form button {
+  align-self: flex-end;
+  padding: 10px 20px;
+  font-size: 1rem;
+  
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.form-content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Elemanlar arası boşluk */
+  width: 100%;
+}
+
+
+
+
+
 /* === MOBİL === */
 @media (max-width: 768px) {
   .nav-links {
