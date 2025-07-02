@@ -105,7 +105,51 @@ router.get('/about', (req, res) => {
     res.render('about', {locals})
 });
 
+router.get('/search', async (req, res) => {
+  const query = req.query.q;
+  const page = parseInt(req.query.page) || 1;
+  const perPage = 5;
 
+
+  try {
+    const filter = {
+      isDeleted: false,
+      $or: [
+        { title: { $regex: query, $options: 'i' } },
+        { content: { $regex: query, $options: 'i' } }
+      ]
+    };
+
+    const count = await Post.countDocuments(filter);
+
+    const data = await Post.find(filter)
+      .populate('author', 'userName')
+      .sort({ createdAt: -1 })
+      .skip((page - 1) * perPage)
+      .limit(perPage)
+      .lean();
+
+    const hasNextPage = page * perPage < count;
+    const nextPage = page + 1;
+    const hasPrevPage = page > 1;
+
+    res.render('index', {
+      locals: {
+        title: `Arama Sonuçları: "${query}"`,
+        description: 'Arama sonuçları'
+      },
+      data,
+      current: page,
+      nextPage: hasNextPage ? nextPage : null,
+      hasPrevPage,
+      totalPages: Math.ceil(count / perPage),
+      currentRoute: '/search?q=' + query
+    });
+  } catch (err) {
+    console.error(err);
+    res.send('Arama sırasında bir hata oluştu.');
+  }
+});
 
 // async function insertPostData() {
 //   const dummyUserId = new mongoose.Types.ObjectId(); // test kullanıcı ID'si
