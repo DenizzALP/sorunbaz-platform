@@ -24,7 +24,7 @@ router.get('', async (req, res) => {
     const count = await Post.countDocuments({});
 
     // Verileri sırala, atla ve limite göre getir (sayfa sayfa)
-    const data = await Post.find()
+    const data = await Post.find({isDeleted: false })
       .populate('author', 'userName')
       .sort({ createdAt: -1 })
       .skip((page - 1) * perPage)  // Önceki sayfalardaki kayıtları atla

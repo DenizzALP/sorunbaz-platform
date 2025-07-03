@@ -281,7 +281,17 @@
   gap: 20px; /* Elemanlar arası boşluk */
   width: 100%;
 }
-
+/* === profile section === */
+.profile-article-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+.profile-content-container{
+  display: flex;
+  flex-direction: column;
+}
 
 
 
