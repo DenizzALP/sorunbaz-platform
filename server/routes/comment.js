@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { ensureAuth } = require('../middleware/authMiddleware');
 const Comment = require('../models/Comment');
-const Post = require('../models/Post');
+//const Post = require('../models/Post');
 
 router.post('/comment/:postId',ensureAuth, async (req, res) => {
   if (!req.session.user) return res.redirect('/login');
