@@ -9,9 +9,15 @@
                     <p><%= post.content.substring(0, 100) %>...</p>
                     <a href="/post/<%= post._id %>">Devamını oku</a>
                 </div>  
-                <form action="/delete-post/<%= post._id %>" method="POST" onsubmit="return confirm('Bu gönderiyi silmek istediğine emin misin?')">
-                    <button type="submit">Sil</button>
-                </form>
+                <div class="post-actions">
+                    <!-- <a class="edit-btn" href="/edit-post/%= post._id %>">Düzenle</a>  -->
+                    <form action="/edit-post/<%= post._id %>">
+                        <button type="submit">Düzenle</button>
+                    </form>
+                    <form action="/delete-post/<%= post._id %>" method="POST" onsubmit="return confirm('Bu gönderiyi silmek istediğine emin misin?')">
+                        <button type="submit">Sil</button>
+                    </form>
+                </div>    
             </div>
 
         </div>

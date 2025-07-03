@@ -292,7 +292,10 @@
   display: flex;
   flex-direction: column;
 }
-
+.post-actions{
+  display: flex;
+  gap: 5px;
+}
 
 
 
