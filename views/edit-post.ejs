@@ -1,0 +1,9 @@
+<section class="create-comment container">
+  <h1>Gönderiyi Düzenle</h1>
+  <form class="create-comment-form" action="/edit-post/<%= post._id %>" method="POST">
+    <input name="title" value="<%= post.title %>" required />
+    <textarea name="content" required><%= post.content %></textarea>
+    <input name="tags" value="<%= post.tags.join(', ') %>" />
+    <button type="submit">Güncelle</button>
+  </form>
+</section>
