@@ -81,8 +81,70 @@ npm install
 
 # 3. Create .env file
 touch .env
-```
+
 ##.env file structure:
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
 SESSION_SECRET=your_secret
+
+# 4. Run the project
+npm start
+```
+
+---
+
+##🧪 Usage
+
+- Visit http://localhost:5000
+
+- Register or login
+
+- Start creating posts, leaving comments, and exploring other users' content
+
+- Edit or delete your own posts via the profile page
+
+## 📁 Project Structure
+
+
+```bash
+sorunbaz-platform/
+│
+├── public/               # Static assets (CSS, images)
+├── server/
+│   ├── config/           # MongoDB connection
+│   ├── middleware/       # Auth middleware
+│   ├── models/           # Mongoose models (Post, User, Comment, etc.)
+│   ├── routes/           # All route files (main, auth, comment, profile, etc.)
+│   └── views/            # EJS templates
+├── .env                  # Environment variables
+├── package.json
+└── app.js                # Entry point
+
+```
+
+---
+
+## 🤝 Contributing
+Pull requests and feedback are welcome.
+For any bug reports or feature requests, please open an issue.
+
+---
+
+## 📄 License
+This project is licensed for educational and personal use only.
+If you intend to use it publicly, you must credit the author:
+
+> Developed by Erda Deniz Alp
+> GitHub: @DenizzALP
+
+
+
+
+
+
+
+
+
+
+
+
