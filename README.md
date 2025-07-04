@@ -55,3 +55,34 @@ The platform is designed for discussion, knowledge sharing, and learning through
 ![profile dark](https://github.com/user-attachments/assets/ba243ff8-42e1-4964-a817-aa1e019e3038)
 
 ---
+
+## ⚙️ Tech Stack
+
+- **Frontend:** HTML, CSS, EJS
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB + Mongoose
+- **Session Handling:** express-session
+- **Templating:** EJS with express-ejs-layouts
+- **Form Validation:** Vanilla JS (client-side)
+- **Version Control:** Git & GitHub
+
+---
+
+
+## 🚀 Installation
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/DenizzALP/sorunbaz-platform.git
+cd sorunbaz-platform
+
+# 2. Install dependencies
+npm install
+
+# 3. Create .env file
+touch .env
+```
+##.env file structure:
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+SESSION_SECRET=your_secret
