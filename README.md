@@ -66,9 +66,11 @@ The platform is designed for discussion, knowledge sharing, and learning through
 
 
 Responsive design in action:
+
 ![mobil anasyfa2](https://github.com/user-attachments/assets/c0d2be74-1355-4825-8fe6-ad129827155a)
-![Uploading mobil login dark.PNG…]()
 ![molbil register](https://github.com/user-attachments/assets/7b6e0ce9-f156-46d3-9567-ccda4d4c19d3)
+![mobil login dark](https://github.com/user-attachments/assets/c1f3601f-9f14-46c5-af48-18b2f5d25419)
+![mobil anasyfa](https://github.com/user-attachments/assets/f3aa4331-7149-4231-bbe0-670928664fa2)
 
 
 
