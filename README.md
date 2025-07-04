@@ -63,9 +63,12 @@ The platform is designed for discussion, knowledge sharing, and learning through
 ![profile dark](https://github.com/user-attachments/assets/ba243ff8-42e1-4964-a817-aa1e019e3038)
 
 ### 🔹 Mobile Screenshots
-![Uploading mobil login dark.PNG…]()
+
 
 Responsive design in action:
+![mobil anasyfa2](https://github.com/user-attachments/assets/c0d2be74-1355-4825-8fe6-ad129827155a)
+![Uploading mobil login dark.PNG…]()
+![molbil register](https://github.com/user-attachments/assets/7b6e0ce9-f156-46d3-9567-ccda4d4c19d3)
 
 
 
