@@ -8,18 +8,26 @@ The platform is designed for discussion, knowledge sharing, and learning through
 
 > ⚠️ This project was built entirely by [Erda Deniz Alp](https://github.com/DenizzALP) for learning purposes.  
 > If you plan to use or share this project, please give proper credit.
-
+> ✨ UI fully designed and styled by the developer (no UI libraries used).
+ 
 ---
 
 ## 🔍 Features
 
 - 📝 Create, edit, and delete posts
-- 💬 Comment on posts (only for logged-in users)
-- 🧑‍🎓 User authentication (register/login/logout)
-- ⭐ Add tags to posts and filter via search
-- 🧾 User profile page with post management
+- 💬 Comment system (available to logged-in users)
+- 🧑‍🎓 User authentication (Register, Login, Logout)
 - 🔐 Session-based authorization with middleware
-- 🗃 MongoDB-based data modeling (Posts, Users, Comments, etc.)
+- 🧾 User profile with personal post management
+- ⭐ Tag support for posts and searchable content
+- 🔍 Dynamic search bar (title & content filter)
+- 📱 Fully responsive layout (mobile, tablet, desktop)
+- 🌙 Dark / ☀️ Light mode toggle
+- ✅ Client-side form validation (Register/Login)
+- 🧠 Clean and minimalist UI built from scratch
+- 🧭 Navigation bar updates based on user session
+- 🗃 MongoDB-based schema design (Users, Posts, Comments, Ratings, etc.)
+- 🎯 Smooth UX with helpful alerts and layout transitions
 
 ---
 
@@ -54,11 +62,18 @@ The platform is designed for discussion, knowledge sharing, and learning through
 ![Profile Screenshot]
 ![profile dark](https://github.com/user-attachments/assets/ba243ff8-42e1-4964-a817-aa1e019e3038)
 
+### 🔹 Mobile Screenshots
+![Uploading mobil login dark.PNG…]()
+
+Responsive design in action:
+
+
+
 ---
 
 ## ⚙️ Tech Stack
 
-- **Frontend:** HTML, CSS, EJS
+- **Frontend:** HTML, CSS, EJS, JavaScript (Vanilla)
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB + Mongoose
 - **Session Handling:** express-session
